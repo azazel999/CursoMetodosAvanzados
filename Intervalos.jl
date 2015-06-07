@@ -6,7 +6,7 @@ import Base.in
 import Base.==
 import Base.^
 
-export Intervalo, in, == , redonUP , redonDOWN, ^, Tr, T, Det, adj, inv
+export Intervalo, in, == , redonUP , redonDOWN, ^, Tr, T, Det, adj, inv, N
 
 #DEFINIMOS EL TIPO INTERVALO 
 type Intervalo
@@ -159,5 +159,10 @@ end
 function inv(A::Array{Intervalo,2})
     adj(A)/Det(A)
 end
+
+#Norma
+#function N(A::Array{Intervalo,2})
+#    max(A[1]+A[2], A[3]+A[4])
+#end
 
 end
